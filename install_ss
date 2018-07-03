@@ -1,0 +1,57 @@
+#!/bin/ash
+
+# model=$(cat /proc/xiaoqiang/model)
+   
+case "$1" in
+"add")
+	cp ./ssr.mt /tmp/ss.mt >/dev/null 2>&1
+	if [ $? -ne 0 ];then
+		echo -e "1801\c"
+		exit
+	fi
+	cd /tmp
+	unzip -o /tmp/ss.mt -d /tmp >/dev/null 2>&1
+	
+	if [ $? -ne 0 ];then
+		echo -e "1802\c"
+		exit
+	fi
+	cp -rf /tmp/ss /etc/misstar/applications
+	chmod +x -R /etc/misstar/applications/ss/bin/*
+	chmod +x /etc/misstar/applications/ss/script/*
+	. /etc/misstar/applications/ss/installed/json.conf
+	echo >> /etc/misstar/scripts/file_check
+	cat /etc/misstar/applications/ss/installed/filecheck.conf >> /etc/misstar/scripts/file_check 
+	echo >> /etc/config/misstar
+	cat /etc/misstar/applications/ss/installed/misstar >> /etc/config/misstar
+	echo >> /etc/misstar/scripts/Monitor
+	cat /etc/misstar/applications/ss/installed/monitor >> /etc/misstar/scripts/Monitor
+	echo "/etc/misstar/applications/ss/script/ss restart" >> /etc/misstar/scripts/Dayjob
+	cp -rf /etc/misstar/applications/ss/installed/*.png /etc/misstar/luci/img/
+	lua /etc/misstar/scripts/applist.lua add '{title="'$title'",icon="'$icon'",href="'$href'",version="'$version'",versionlog="'$versionlog'",describe="'$describe'"}'
+	if [ $? -ne 0 ];then
+		echo -e "1803\c"
+		exit
+	fi
+	/etc/misstar/scripts/file_check 
+	rm -rf /etc/misstar/applications/ss/installed/
+	rm -rf /tmp/luci-indexcache /tmp/luci-modulecache/*
+	rm -rf /tmp/ss
+	rm -rf /tmp/ss.mt
+	 ;;
+
+"del")
+	/etc/misstar/applications/ss/script/ss stop
+	uci delete misstar.ss
+	uci commit misstar
+	rm -rf /etc/misstar/applications/ss
+	lua /etc/misstar/scripts/applist.lua del ss
+	sed -i "/applications\/ss/d" /usr/lib/lua/luci/controller/web/index.lua
+	sed -i "/misstar-ss/d" /etc/misstar/scripts/file_check
+	sed -i "/misstar-ss/d" /etc/misstar/scripts/Monitor
+	sed -i "/script\/ss/d" /etc/misstar/scripts/Dayjob
+	rm /usr/lib/lua/luci/controller/api/ss.lua
+	rm -rf /tmp/luci-indexcache /tmp/luci-modulecache/*
+	 ;;
+esac
+
