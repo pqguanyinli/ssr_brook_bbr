@@ -7,6 +7,7 @@
 wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/shadowsocksR_bbr/master/run.sh && chmod +x run.sh && ./run.sh
 ```
 
+
 ## BIGDONGDONG 搭建谷歌SSR和BBR的方法：（参考）
 
 谷歌VM实例系统里面 没有Debian8了
