@@ -4,7 +4,7 @@
 
 第二步 : 
 ```
-wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/shadowsocksR_bbr/master/run.sh && chmod +x run.sh && ./run.sh
+wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/SSR_BROOK_BBR/master/run.sh && chmod +x run.sh && ./run.sh
 ```
 
 
@@ -50,7 +50,7 @@ wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/shadow
 谷歌云防火墙规则添加 （位置在谷歌云 VPC网络-防火墙）
 点击添加新规则，然后按照一下这个设置好。这样 SSR 设置任何端口都可以使用。并且后续不需要再来防火墙规则做设置了。
 
-![image](https://github.com/pqguanyinli/YankeeBBR/blob/master/images/1.png)
+![image](https://github.com/pqguanyinli/SSR_BROOK_BBR/blob/master/images/1.png)
 
 
 ## BIGDONGDONG BROOK 的搭建方法：（参考）
@@ -124,7 +124,7 @@ Brook Stream（旧版协议，即 [streamservers]，不推荐，除非使用新�
 [信息] Brook 启动成功 !
 
 9： Brook 用户配置复制或截图
-![image](https://github.com/pqguanyinli/YankeeBBR/blob/master/images/2.jpg)
+![image](https://github.com/pqguanyinli/SSR_BROOK_BBR/blob/master/images/2.jpg)
 
 
 10：如何在手机、电脑（PC/MAC)上使用请参照视频
@@ -137,4 +137,4 @@ brook 客户端下载地址:https://github.com/txthinking/brook/releases
 
 点击添加新规则，然后按照一下这个设置好。这样 SSR 设置任何端口都可以使用。并且后续不需要再来防火墙规则做设置了。缺点是 所有端口开放。当然也会有一些危险。
 
-![image](https://github.com/pqguanyinli/YankeeBBR/blob/master/images/3.png)
+![image](https://github.com/pqguanyinli/SSR_BROOK_BBR/blob/master/images/3.png)
