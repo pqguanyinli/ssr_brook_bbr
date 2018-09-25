@@ -1,10 +1,10 @@
-## 5kong搭建SSR\BBR代码：
+## 5kong搭建ssr\bbr代码：
 
 第一步 :```sudo su```
 
 第二步 : ```wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/ssr_brook_bbr/master/run.sh && chmod +x run.sh && ./run.sh```
 
-## BIGDONGDONG 搭建谷歌SSR和BBR的方法：（参考）
+## BIGDONGDONG 搭建谷歌ssr和bbr的方法：（参考）
 
 谷歌VM实例系统里面 没有Debian8了
 
@@ -49,7 +49,7 @@
 ![image](https://github.com/pqguanyinli/ssr_brook_bbr/blob/master/images/1.png)
 
 
-## BIGDONGDONG BROOK 的搭建方法：（参考）
+## BIGDONGDONG brook 的搭建方法：（参考）
 
 原创技术小哥的网站更多详细设置参见原贴：https://doub.io/brook-jc3/
 
@@ -59,7 +59,7 @@
 
 以下是以谷歌云为例子！！
 
-## Part1首先搭建BBR加速
+## Part1首先搭建bbr加速
 
 1：``` sudo -i ```
 
