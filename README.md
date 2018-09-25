@@ -14,14 +14,14 @@ wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/SSR_BR
 
 1、ssh到路由器 
  
-2、执行以下4条脚本 
+2、分别执行以下4条脚本 
 ```
 wget --no-check-certificate https://raw.githubusercontent.com/SSR_BROOK_BBR/master/v2ray.tar.gz
 tar -zxvf  v2ray.tar.gz
 chmod +x v2ray/install.sh
 sh v2ray/install.sh
 ```   
-另外，还可以将文件压缩包v2ray.tar.gz,通过网页端上传进行离线安装。
+另外，还可以将文件压缩包v2ray.tar.gz下载后通过路由器的网页端上传进行离线安装。
 
 ## 在梅林固件路由器下利用ssh 连接路由器离线安装shadowsocks科学上网插件
 
