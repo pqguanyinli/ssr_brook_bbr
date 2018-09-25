@@ -6,7 +6,21 @@
 ```
 wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/SSR_BROOK_BBR/master/run.sh && chmod +x run.sh && ./run.sh
 ```
+## 在路由器下安装V2Ray插件
 
+准备工具：putty (win10)  terminal (mac 自带)
+
+步骤：
+
+1、ssh到路由器 
+ 
+2、执行以下4条脚本 
+```
+wget --no-check-certificate https://raw.githubusercontent.com/SSR_BROOK_BBR/master/master/v2ray.tar.gz
+tar -zxvf  v2ray.tar.gz
+chmod +x v2ray/install.sh
+sh v2ray/install.sh
+```   
 
 ## BIGDONGDONG 搭建谷歌SSR和BBR的方法：（参考）
 
