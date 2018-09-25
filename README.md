@@ -3,60 +3,6 @@
 第一步 :```sudo su```
 
 第二步 : ```wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/SSR_BROOK_BBR/master/run.sh && chmod +x run.sh && ./run.sh```
-## 在梅林固件路由器下安装V2Ray插件
-
-准备工具：putty (win10)  terminal (mac 自带)
-
-操作步骤：
-
-1、ssh到路由器 
- 
-2、分别执行以下4条脚本 
-```
-wget --no-check-certificate https://raw.githubusercontent.com/SSR_BROOK_BBR/master/v2ray.tar.gz
-tar -zxvf  v2ray.tar.gz
-chmod +x v2ray/install.sh
-sh v2ray/install.sh
-```   
-另外，还可以将文件压缩包v2ray.tar.gz下载后通过路由器的网页端上传进行离线安装。
-
-## 在梅林固件路由器下利用ssh 连接路由器离线安装shadowsocks科学上网插件
-
-步骤概括只有三步：
-
-第一步：把插件包shadowsocks.tar.gz拷贝到路由器
-
-第二步：在路由器里解压插件包
-
-第三步：修改执行权限并安装插件
-
-
-准备工作
-
-1、下载putty，这是一个ssh连接工具
-
-2、下载winscp，用于拷贝离线插件包到路由器
-
-3、在梅林系统里开启ssh选项。
-
-具体步骤：
-
-一、在梅林系统里开启ssh
-
-二、打开winscp，登陆路由器，将shadowsocks.tar.gz拷贝到某个路径
-
-三、打开putty 连接到ssh到路由器，定位到shadowsocks.tar.gz所在路径
-
-执行下面的代码：
-
-//解压插件
-```tar -zxvf shadowsocks.tar.gz```
-
-//修改插件的执行权限，使其可执行
-```chmod +x shadowsocks/install.sh```
-
-//执行安装程序
-```sh shadowsocks/install.sh```
 
 ## BIGDONGDONG 搭建谷歌SSR和BBR的方法：（参考）
 
@@ -188,3 +134,58 @@ brook 客户端下载地址:https://github.com/txthinking/brook/releases
 点击添加新规则，然后按照一下这个设置好。这样 SSR 设置任何端口都可以使用。并且后续不需要再来防火墙规则做设置了。缺点是 所有端口开放。当然也会有一些危险。
 
 ![image](https://github.com/pqguanyinli/SSR_BROOK_BBR/blob/master/images/3.png)
+
+
+## 在梅林固件路由器下利用ssh 连接路由器离线安装shadowsocks科学上网插件
+
+步骤概括只有三步：
+
+第一步：把插件包shadowsocks.tar.gz拷贝到路由器
+
+第二步：在路由器里解压插件包
+
+第三步：修改执行权限并安装插件
+
+准备工作
+
+1、下载putty，这是一个ssh连接工具
+
+2、下载winscp，用于拷贝离线插件包到路由器
+
+3、在梅林系统里开启ssh选项。
+
+具体步骤：
+
+一、在梅林系统里开启ssh
+
+二、打开winscp，登陆路由器，将shadowsocks.tar.gz拷贝到某个路径
+
+三、打开putty 连接到ssh到路由器，定位到shadowsocks.tar.gz所在路径
+
+执行下面的代码：
+
+//解压插件
+```tar -zxvf shadowsocks.tar.gz```
+
+//修改插件的执行权限，使其可执行
+```chmod +x shadowsocks/install.sh```
+
+//执行安装程序
+```sh shadowsocks/install.sh```
+
+## 在梅林固件路由器下安装V2Ray插件
+
+准备工具：putty (win10)  terminal (mac 自带)
+
+操作步骤：
+
+1、ssh到路由器 
+ 
+2、分别执行以下4条脚本 
+```
+wget --no-check-certificate https://raw.githubusercontent.com/SSR_BROOK_BBR/master/v2ray.tar.gz
+tar -zxvf  v2ray.tar.gz
+chmod +x v2ray/install.sh
+sh v2ray/install.sh
+```   
+另外，还可以将文件压缩包v2ray.tar.gz下载后通过路由器的网页端上传进行离线安装。
