@@ -16,7 +16,7 @@ wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/SSR_BR
  
 2、执行以下4条脚本 
 ```
-wget --no-check-certificate https://raw.githubusercontent.com/SSR_BROOK_BBR/master/master/v2ray.tar.gz
+wget --no-check-certificate https://raw.githubusercontent.com/SSR_BROOK_BBR/master/v2ray.tar.gz
 tar -zxvf  v2ray.tar.gz
 chmod +x v2ray/install.sh
 sh v2ray/install.sh
