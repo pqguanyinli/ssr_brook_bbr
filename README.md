@@ -21,22 +21,46 @@ tar -zxvf  v2ray.tar.gz
 chmod +x v2ray/install.sh
 sh v2ray/install.sh
 ```   
-```
-# v2ray_switch
-华硕梅林固件ss切换v2ray插件
+另外，还可以将文件压缩包v2ray.tar.gz,通过网页端上传进行离线安装。
 
-### 手动安装
-1. 先安装梅林ss插件
-2. 随便输入ss账号配置(推荐使用可用账号信息，以便实现切换)，启动插件。
-3. 下载打包文件，推荐命名为v2ray.tar.gz，上传到路由器/tmp目录下
-4. 解压缩tar xzvf v2ray.tar.gz
-5. 执行安装 sh v2ray/install.sh #安装完成后会自动清除v2ray*开头的安装包
-6. 登陆插件中心，输入v2ray账号,开启v2ray.关闭v2ray后程序会尝试重启ss进程，所以如果之前ss账号可用，可以实现v2ray到ss账号之间的切换。
+## 在梅林固件路由器下利用ssh 连接路由器离线安装shadowsocks科学上网插件
 
-### 离线安装
-1. 使用前提，安装梅林ss插件。
-2. 将文件打包为v2ray.tar.gz,通过网页端上传进行离线安装。
-```
+步骤概括只有三步：
+
+第一步：把插件包shadowsocks.tar.gz拷贝到路由器
+
+第二步：在路由器里解压插件包
+
+第三步：修改执行权限并安装插件
+
+
+准备工作
+
+1、下载putty，这是一个ssh连接工具
+
+2、下载winscp，用于拷贝离线插件包到路由器
+
+3、在梅林系统里开启ssh选项。
+
+具体步骤：
+
+一、在梅林系统里开启ssh
+
+二、打开winscp，登陆路由器，将shadowsocks.tar.gz拷贝到某个路径
+
+三、打开putty 连接到ssh到路由器，定位到shadowsocks.tar.gz所在路径
+
+执行下面的代码：
+
+//解压插件
+```tar -zxvf shadowsocks.tar.gz```
+
+//修改插件的执行权限，使其可执行
+```chmod +x shadowsocks/install.sh```
+
+//执行安装程序
+```sh shadowsocks/install.sh```
+
 ## BIGDONGDONG 搭建谷歌SSR和BBR的方法：（参考）
 
 谷歌VM实例系统里面 没有Debian8了
