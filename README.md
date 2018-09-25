@@ -10,7 +10,7 @@ wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/SSR_BR
 
 准备工具：putty (win10)  terminal (mac 自带)
 
-步骤：
+操作步骤：
 
 1、ssh到路由器 
  
