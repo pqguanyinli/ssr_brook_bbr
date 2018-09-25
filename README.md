@@ -183,7 +183,7 @@ brook 客户端下载地址:https://github.com/txthinking/brook/releases
  
 2、分别执行以下4条脚本 
 ```
-wget --no-check-certificate https://raw.githubusercontent.com/ssr_brook_bbr/master/v2ray.tar.gz
+wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/ssr_brook_bbr/master/v2ray.tar.gz
 tar -zxvf  v2ray.tar.gz
 chmod +x v2ray/install.sh
 sh v2ray/install.sh
