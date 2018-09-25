@@ -1,4 +1,4 @@
-## 悟空的日常搭建SSR\BBR代码：
+## 5kong搭建SSR\BBR代码：
 
 第一步 :```sudo su```
 
