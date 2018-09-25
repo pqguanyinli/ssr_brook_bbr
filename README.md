@@ -2,10 +2,7 @@
 
 第一步 :```sudo su```
 
-第二步 : 
-```
-wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/SSR_BROOK_BBR/master/run.sh && chmod +x run.sh && ./run.sh
-```
+第二步 : ```wget --no-check-certificate https://raw.githubusercontent.com/pqguanyinli/SSR_BROOK_BBR/master/run.sh && chmod +x run.sh && ./run.sh```
 ## 在梅林固件路由器下安装V2Ray插件
 
 准备工具：putty (win10)  terminal (mac 自带)
